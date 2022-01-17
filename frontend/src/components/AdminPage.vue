@@ -12,6 +12,7 @@
             <button @click="showChangePasswordSettings()">Wachtwoord wijzigen</button>
             <button @click="showRegisterPage()">Maak administrator</button>
             <button @click="showAdminListPage()">Lijst met administratoren</button>
+            <button @click="showEditProductPage()">Product toevoegen</button>
         </article>
 
         <!-- Content -->
@@ -148,6 +149,10 @@
                 const adminListQuery = "#adminpage-component > article:nth-child(3) > div:nth-child(6)";
                 const adminListElement = document.querySelector(adminListQuery);
                 adminListElement.classList.remove("hidden");
+            },
+
+            showEditProductPage: function(){
+                this.$router.replace('/editproduct');
             },
 
             hideAllContent: function(){
