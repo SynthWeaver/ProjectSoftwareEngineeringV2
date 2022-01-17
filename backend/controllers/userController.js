@@ -13,6 +13,12 @@ async function createUser(email, password, admin) {
             return;
         }
 
+        //email regex
+        const regex = "^[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]{2,3}$";
+        if(!email.match(regex)){
+          return;
+        }
+
         // Store hash in your password DB.        
         const passwordHash = bcrypt.hashSync(password, salt);
 
@@ -32,6 +38,12 @@ async function updateUser(oldEmail, newEmail, oldPassword, newPassword) {
     try {
         if(!oldEmail || !newEmail || !oldPassword || !newPassword){ 
             return;
+        }
+
+        //email regex
+        const regex = "^[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]{2,3}$";
+        if(!oldEmail.match(regex) || !newEmail.match(regex)){
+          return;
         }
 
         // Store hash in your password DB.        

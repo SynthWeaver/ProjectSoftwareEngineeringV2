@@ -34,6 +34,13 @@ export default {
           return;
       }
 
+      //email regex
+      const regex = "^[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]{2,3}$";
+      if(!this.oldEmail.match(regex) || !this.newEmail.match(regex)){
+        alert("Email is fout");
+        return;
+      }
+
       const data = {
           oldEmail: this.oldEmail,
           newEmail: this.newEmail,
@@ -55,6 +62,10 @@ export default {
 
           if (hasUser) {
               alert("Email gewijzigd gelukt");
+
+              //refresh to load show new admins
+              this.$router.replace('/login');
+              this.$router.replace('/admin');
           } else {
               alert("Er ging iets mis, klopt je wachtwoord wel? Probeer opnieuw.");
           }

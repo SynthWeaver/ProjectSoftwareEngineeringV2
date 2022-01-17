@@ -42,7 +42,8 @@ router.post('/api/register', async function (req, res, next) {
   res.end();
 });
 
-async function checkAdmin(){
+async function checkAdmin(req){
+
   const userId = req.session.user;
   if(userId != null){
     const user = await userController.findUserById(userId);
@@ -67,7 +68,7 @@ router.get('/api/admin/adminlist', middleware.checkAdmin, async function (req, r
 /* POST adminChangeEmail. */
 router.post('/api/admin/changeEmail', async function (req, res, next) {
   //check if current user is admin
-  if(!checkAdmin()){
+  if(!checkAdmin(req)){
     res.send({ hasUser: false });
     res.end();
     return;
@@ -91,7 +92,7 @@ router.post('/api/admin/changeEmail', async function (req, res, next) {
 /* POST admin changePassword. */
 router.post('/api/admin/changePassword', async function (req, res, next) {
   //check if current user is admin
-  if(!checkAdmin()){
+  if(!checkAdmin(req)){
     res.send({ hasUser: false });
     res.end();
     return;

@@ -41,6 +41,13 @@ export default {
                 return;
             }
 
+            //email regex
+            const regex = "^[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]{2,3}$";
+            if(!this.email.match(regex)){
+              alert("Email is fout");
+              return;
+            }
+
             //put data in object
             const data = {
                 email: this.email,
@@ -59,11 +66,11 @@ export default {
             .then((data) => {
                 //check for a successfull regestration
                 if (data.hasUser) {
-                  alert("Registratie gelukt");
-                  
-                  //refresh to load show new admins
-                  this.$router.replace('/login');
-                  this.$router.replace('/admin');
+                    alert("Registratie gelukt");
+                    
+                    //refresh to load show new admins
+                    this.$router.replace('/login');
+                    this.$router.replace('/admin');
                 } else {
                   alert("Er ging iets mis, probeer opnieuw.");
                 }
