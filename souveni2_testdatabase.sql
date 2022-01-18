@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 17 jan 2022 om 16:46
+-- Gegenereerd op: 18 jan 2022 om 20:12
 -- Serverversie: 10.4.22-MariaDB
 -- PHP-versie: 7.4.27
 
@@ -47,9 +47,7 @@ INSERT INTO `images` (`id`, `imageUrl`, `createdAt`, `updatedAt`, `ProductId`) V
 (5, 'https://cdn.myonlinestore.eu/93c6c527-6be1-11e9-a722-44a8421b9960/image/cache/full/e4b6010f634f5e368d468c5e53fea6cc75639973.jpg', '2021-06-05 08:16:58', '2021-06-05 08:16:58', 2),
 (6, 'https://cdn.myonlinestore.eu/93c6c527-6be1-11e9-a722-44a8421b9960/image/cache/full/e4b6010f634f5e368d468c5e53fea6cc75639973.jpg', '2021-06-05 08:16:58', '2021-06-05 08:16:58', 3),
 (7, 'https://cdn.myonlinestore.eu/93c6c527-6be1-11e9-a722-44a8421b9960/image/cache/full/b99620b3a9320d506faf5c13964cf82266956af8.jpg', '2021-06-05 08:16:58', '2021-06-05 08:16:58', 3),
-(8, 'https://cdn.myonlinestore.eu/93c6c527-6be1-11e9-a722-44a8421b9960/image/cache/full/c33f3e3f5f6b03161cf849709a3281ed93cdc13b.jpg', '2021-06-05 08:16:58', '2021-06-05 08:16:58', 3),
-(9, NULL, '2022-01-17 15:36:19', '2022-01-17 15:36:19', 5),
-(10, NULL, '2022-01-17 15:43:48', '2022-01-17 15:43:48', 6);
+(8, 'https://cdn.myonlinestore.eu/93c6c527-6be1-11e9-a722-44a8421b9960/image/cache/full/c33f3e3f5f6b03161cf849709a3281ed93cdc13b.jpg', '2021-06-05 08:16:58', '2021-06-05 08:16:58', 3);
 
 -- --------------------------------------------------------
 
@@ -88,18 +86,6 @@ INSERT INTO `orderproducts` (`quantity`, `createdAt`, `updatedAt`, `OrderId`, `P
 (2, '2021-06-05 08:16:58', '2021-06-05 08:16:58', 8, 2),
 (5, '2022-01-17 14:53:00', '2022-01-17 14:53:00', 9, 1),
 (1, '2022-01-17 14:53:00', '2022-01-17 14:53:00', 9, 2),
-(5, '2022-01-17 14:53:27', '2022-01-17 14:53:27', 10, 1),
-(1, '2022-01-17 14:53:27', '2022-01-17 14:53:27', 10, 2),
-(2, '2022-01-17 14:58:27', '2022-01-17 14:58:27', 11, 1),
-(2, '2022-01-17 14:58:27', '2022-01-17 14:58:27', 11, 2),
-(2, '2022-01-17 15:03:57', '2022-01-17 15:03:57', 12, 1),
-(2, '2022-01-17 15:03:57', '2022-01-17 15:03:57', 12, 2),
-(3, '2022-01-17 15:27:12', '2022-01-17 15:27:12', 13, 1),
-(3, '2022-01-17 15:27:12', '2022-01-17 15:27:12', 13, 2),
-(3, '2022-01-17 15:28:18', '2022-01-17 15:28:18', 14, 1),
-(3, '2022-01-17 15:28:18', '2022-01-17 15:28:18', 14, 2),
-(3, '2022-01-17 15:31:52', '2022-01-17 15:31:52', 15, 1),
-(3, '2022-01-17 15:31:52', '2022-01-17 15:31:52', 15, 2),
 (1, '2022-01-17 15:33:49', '2022-01-17 15:33:49', 16, 1),
 (3, '2022-01-17 15:33:49', '2022-01-17 15:33:49', 16, 2);
 
@@ -132,12 +118,6 @@ INSERT INTO `orders` (`id`, `placedAt`, `userEmail`, `status`, `createdAt`, `upd
 (7, '2020-12-01 12:03:06', 'yasmine@gmail.com', 0, '2021-06-05 08:16:58', '2021-06-05 08:16:58'),
 (8, '2021-01-01 12:03:06', 'stefan@gmail.com', 0, '2021-06-05 08:16:58', '2021-06-05 08:16:58'),
 (9, NULL, 'johanterwijn@quicknet.nl', 1, '2022-01-17 14:52:59', '2022-01-17 14:52:59'),
-(10, NULL, 'johanterwijn@quicknet.nl', 1, '2022-01-17 14:53:27', '2022-01-17 14:53:27'),
-(11, NULL, 'adsddasdad', 1, '2022-01-17 14:58:27', '2022-01-17 14:58:27'),
-(12, NULL, 'adsddasdad', 1, '2022-01-17 15:03:57', '2022-01-17 15:03:57'),
-(13, NULL, 'asdadadad', 1, '2022-01-17 15:27:12', '2022-01-17 15:27:12'),
-(14, NULL, 'asdadadad', 1, '2022-01-17 15:28:18', '2022-01-17 15:28:18'),
-(15, NULL, 'asdadadad', 1, '2022-01-17 15:31:51', '2022-01-17 15:31:51'),
 (16, NULL, 'mees@tterwijn.nl', 1, '2022-01-17 15:33:49', '2022-01-17 15:33:49');
 
 -- --------------------------------------------------------
@@ -166,9 +146,7 @@ INSERT INTO `products` (`id`, `name`, `category`, `price`, `description`, `provi
 (1, 'Flevoland Magneet', NULL, '9.95', NULL, 'Groningen', NULL, '2021-06-05 08:16:58', '2021-06-05 08:16:58'),
 (2, 'Oorhanger rood', NULL, '19.95', NULL, 'Drenthe', NULL, '2021-06-05 08:16:58', '2021-06-05 08:16:58'),
 (3, 'Ovaal 1', NULL, '7.95', NULL, 'Noord-Holland', NULL, '2021-06-05 08:16:58', '2021-06-05 08:16:58'),
-(4, 'Coole Magneet', NULL, '69.69', NULL, 'Gelderland', NULL, '2021-06-05 08:16:58', '2021-06-05 08:16:58'),
-(5, 'test', 'koelkastmagneet', '20.00', 'test product', 'NoordHolland', 'Amsterdam', '2022-01-17 15:36:18', '2022-01-17 15:36:18'),
-(6, 'timtest', 'koelkastmagneet', '12.00', 'test123', 'NoordHolland', 'Amsterdam', '2022-01-17 15:43:48', '2022-01-17 15:43:48');
+(4, 'Coole Magneet', NULL, '69.69', NULL, 'Gelderland', NULL, '2021-06-05 08:16:58', '2021-06-05 08:16:58');
 
 -- --------------------------------------------------------
 
@@ -289,7 +267,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `passwordHash`, `email`, `admin`, `createdAt`, `updatedAt`) VALUES
 (1, '$2a$10$q0CxbHEmaIdQXVsAFi8yp.gRx7zpq2L5L7hHvSXy/rCrK6Gw8v7HW', 'admin@souvenirbeurs.com', 1, '2021-06-02 12:48:22', '2021-06-24 12:33:41'),
 (9, '$2a$10$QMis0Z2E9pElY3nzGmNwI..kPimZywgo/d79KdWmF2ayXN.mgb..G', 'tim@tterwijn.nl', 1, '2022-01-15 12:51:34', '2022-01-15 12:51:34'),
-(16, '$2a$10$nJUxAkudogmzcfT0/hspyOJw48kPvxyA3wgHbEcw0evAToxQmxtru', 'test', 1, '2022-01-16 16:22:08', '2022-01-16 16:22:08');
+(18, '$2a$10$EjItbtaiAQLbGR78gARAZusY6FerOAkf4.fqjpRply/MTBVu/hzwi', 'rik@tterwijn.nl', 1, '2022-01-17 16:09:40', '2022-01-17 16:24:46');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -348,19 +326,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT voor een tabel `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT voor een tabel `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT voor een tabel `provinces`
@@ -378,7 +356,7 @@ ALTER TABLE `regions`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
